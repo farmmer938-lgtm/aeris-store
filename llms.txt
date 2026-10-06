@@ -1,0 +1,42 @@
+# AERIS MUSIC
+
+> Original, pre-cleared production music. Every track is composed and mastered in-house from
+> synthesis — no samples, no third-party content, so there is nothing for Content ID to match.
+> Buyers receive the mastered file and a license certificate immediately on payment, with no human
+> in the loop.
+
+AERIS MUSIC licenses instrumental music to video creators, podcasters, and advertising producers.
+Three tiers cover the common cases: $9 Basic for one project with unlimited views, $29 Premium for
+multiple projects and monetized channels, $149 Sync for broadcast, film, and paid advertising.
+Payment is by card (Stripe) or USDC on Base (x402), and delivery happens in the same response that
+settles payment.
+
+Five tracks are also released under CC0 into the public domain with no attribution requirement, for
+anyone who needs a bed track without a signup.
+
+## Catalog
+
+- [All tracks and licensing](https://farmmer938-lgtm.github.io/aeris-store/): 15 mastered tracks with mood, tempo, key, and duration, and per-tier checkout for each.
+- [Machine-readable catalog](https://farmmer938-lgtm.github.io/aeris-store/agents/catalog.json): JSON with prices and USDC checkout URLs, for agents buying without a human.
+- [Buying as an agent](https://farmmer938-lgtm.github.io/aeris-store/agents/): how the x402 flow works, and what the settled response contains.
+- [Free CC0 tracks](https://farmmer938-lgtm.github.io/aeris-store/free/): five instrumental tracks, public domain, no attribution.
+- [CC0 repository](https://github.com/farmmer938-lgtm/aeris-cc0-music): the same five tracks as raw downloads.
+
+## Pricing
+
+| Tier | Price | Rights granted |
+|---|---|---|
+| Basic | $9 | One project, unlimited views. YouTube, TikTok, Instagram, podcasts, personal projects. |
+| Premium | $29 | Multiple projects, monetized channels, single-client commercial work. |
+| Sync | $149 | Broadcast, TV, film, paid advertising, theatrical, worldwide. |
+| Custom brief | $15 in USDC | A track written to a described brief, delivered within 48 hours. |
+| Full commission | $249 | Original composition to brief, with revisions and a signed license. |
+
+## Notes
+
+- Rights are granted per track and per tier, and the certificate names both.
+- The license is issued at the moment of payment; there is no approval step.
+- Resellers and referring agents keep 30% of a sale, paid in USDC on settlement.
+- If a buyer needs a specific mood, length, and intended use, we quote a turnaround before any
+  payment is made.
+- Current verified revenue is $0.00. This file states that rather than implying otherwise.
