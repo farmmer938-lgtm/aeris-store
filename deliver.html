@@ -40,6 +40,13 @@ font-family:ui-monospace,SFMono-Regular,monospace}
     and is never sent to our servers. Keep this page bookmarked: the link is how
     we track your license, so please don't share it.
   </p>
+
+  <details class="note">
+    <summary style="cursor:pointer">Buying as an agent? Decrypt without a browser</summary>
+    <p>The hash of this URL holds everything needed. From a shell:</p>
+    <pre id="cmd" style="white-space:pre-wrap;font-size:.75rem;background:#0f0e15;border:1px solid #23212e;border-radius:8px;padding:10px;overflow-x:auto"></pre>
+    <p>It prints the path of the decrypted master and the license text. No browser, no click.</p>
+  </details>
 </div>
 
 <script>
@@ -103,6 +110,18 @@ font-family:ui-monospace,SFMono-Regular,monospace}
     sub.textContent = TIERS[tier] + ' · AERIS MUSIC';
     go.disabled = false;
     go.textContent = 'Download master MP3 (320 kbps)';
+
+    const cmd = document.getElementById('cmd');
+    if (cmd) {
+      cmd.textContent =
+        '# this URL\n' + location.href + '\n\n' +
+        '# or fetch the ciphertext and decrypt directly\n' +
+        'curl -s -o /tmp/aeris.bin "' + fileUrl + '"\n' +
+        'python3 -c "import base64,sys;from cryptography.hazmat.primitives.ciphers.aead import AESGCM;' +
+        'k=base64.urlsafe_b64decode(\'' + keyB64 + '\'+\'=\'*(-len(\'' + keyB64 + '\')%4));' +
+        'b=open(\'/tmp/aeris.bin\',\'rb\').read();' +
+        'open(\'/tmp/aeris-master.mp3\',\'wb\').write(AESGCM(k).decrypt(b[:12],b[12:],None))"';
+    }
 
     document.getElementById('lic').textContent =
       'AERIS MUSIC — LICENSE CERTIFICATE\n' +
