@@ -21,6 +21,19 @@ anyone who needs a bed track without a signup.
 - [Buying as an agent](https://farmmer938-lgtm.github.io/aeris-store/agents/): how the x402 flow works, and what the settled response contains.
 - [Free CC0 tracks](https://farmmer938-lgtm.github.io/aeris-store/free/): five instrumental tracks, public domain, no attribution.
 - [CC0 repository](https://github.com/farmmer938-lgtm/aeris-cc0-music): the same five tracks as raw downloads.
+- [Support](https://farmmer938-lgtm.github.io/aeris-store/support.html): buy a license, tip in USDC on Base, or sponsor.
+
+## Find music by use
+
+- [Royalty-free music for YouTube](https://farmmer938-lgtm.github.io/aeris-store/royalty-free-music-for-youtube/)
+- [Podcast intro music](https://farmmer938-lgtm.github.io/aeris-store/podcast-intro-music/)
+- [Music for ads and client work](https://farmmer938-lgtm.github.io/aeris-store/music-for-ads-and-client-work/)
+- [Background music for Twitch streams](https://farmmer938-lgtm.github.io/aeris-store/music-for-twitch-streams/)
+- [Background music for videos](https://farmmer938-lgtm.github.io/aeris-store/background-music-for-videos/)
+- [Music for corporate video](https://farmmer938-lgtm.github.io/aeris-store/music-for-corporate-video/)
+- [Wedding video music](https://farmmer938-lgtm.github.io/aeris-store/wedding-video-music/)
+- [Cinematic music for films](https://farmmer938-lgtm.github.io/aeris-store/cinematic-music-for-films/)
+- [Lofi music for study](https://farmmer938-lgtm.github.io/aeris-store/lofi-music-for-study/)
 
 ## Pricing
 
@@ -36,7 +49,7 @@ anyone who needs a bed track without a signup.
 
 - Rights are granted per track and per tier, and the certificate names both.
 - The license is issued at the moment of payment; there is no approval step.
-- Resellers and referring agents keep 30% of a sale, paid in USDC on settlement.
+- Affiliates earn 20% of gross on their own per-tier links, paid in USDC from confirmed payments only.
 - If a buyer needs a specific mood, length, and intended use, we quote a turnaround before any
   payment is made.
 - Current verified revenue is $0.00. This file states that rather than implying otherwise.

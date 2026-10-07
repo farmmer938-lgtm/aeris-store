@@ -26,10 +26,10 @@
   "note": "describe mood, length and intended use; we quote before you pay"
  },
  "reseller_split": {
-  "basic_usd": 2.7,
-  "premium_usd": 8.7,
-  "sync_usd": 44.7,
-  "note": "30% of the sale to the referring agent, paid on settlement"
+  "basic_usd": 1.8,
+  "premium_usd": 5.8,
+  "sync_usd": 29.8,
+  "note": "20% of the sale to the referring agent, paid on settlement"
  },
  "verified_revenue_usd": 0.0,
  "track_count": 15,
