@@ -11,7 +11,7 @@ multiple projects and monetized channels, $149 Sync for broadcast, film, and pai
 Payment is by card (Stripe) or USDC on Base (x402), and delivery happens in the same response that
 settles payment.
 
-Five tracks are also released under CC0 into the public domain with no attribution requirement, for
+Thirteen tracks are also released under CC0 into the public domain with no attribution requirement, for
 anyone who needs a bed track without a signup.
 
 ## Catalog
@@ -19,8 +19,8 @@ anyone who needs a bed track without a signup.
 - [All tracks and licensing](https://farmmer938-lgtm.github.io/aeris-store/): 15 mastered tracks with mood, tempo, key, and duration, and per-tier checkout for each.
 - [Machine-readable catalog](https://farmmer938-lgtm.github.io/aeris-store/agents/catalog.json): JSON with prices and USDC checkout URLs, for agents buying without a human.
 - [Buying as an agent](https://farmmer938-lgtm.github.io/aeris-store/agents/): how the x402 flow works, and what the settled response contains.
-- [Free CC0 tracks](https://farmmer938-lgtm.github.io/aeris-store/free/): five instrumental tracks, public domain, no attribution.
-- [CC0 repository](https://github.com/farmmer938-lgtm/aeris-cc0-music): the same five tracks as raw downloads.
+- [Free CC0 tracks](https://farmmer938-lgtm.github.io/aeris-store/free/): thirteen instrumental tracks, public domain, no attribution.
+- [CC0 repository](https://github.com/farmmer938-lgtm/aeris-cc0-music): the same thirteen tracks as raw downloads.
 - [Support](https://farmmer938-lgtm.github.io/aeris-store/support.html): buy a license, tip in USDC on Base, or sponsor.
 
 ## Find music by use
