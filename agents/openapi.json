@@ -1,0 +1,123 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AERIS MUSIC — licensed production music",
+    "version": "1.0.0",
+    "description": "Original instrumental music, composed and mastered in-house from synthesis. No samples, no third-party content, so there is nothing for Content ID to match. Three license tiers, each payable per track in USDC on Base over x402, with the master and the license certificate released on settlement. The catalog is machine-readable so an agent can choose a track and pay without a human.",
+    "contact": { "url": "https://farmmer938-lgtm.github.io/aeris-store/" },
+    "license": { "name": "Per-track commercial license; five tracks additionally CC0", "url": "https://farmmer938-lgtm.github.io/aeris-store/free/" }
+  },
+  "servers": [{ "url": "https://farmmer938-lgtm.github.io/aeris-store" }],
+  "paths": {
+    "/agents/catalog.json": {
+      "get": {
+        "operationId": "listTracks",
+        "summary": "List every track with mood, tempo, key, duration, and per-tier checkout URLs",
+        "description": "Free to read. Returns the catalog an agent uses to choose a track before paying.",
+        "responses": {
+          "200": {
+            "description": "The catalog",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Catalog" } } }
+          }
+        }
+      }
+    },
+    "/deliver.html": {
+      "get": {
+        "operationId": "redeemLicense",
+        "summary": "Redeem a settled purchase and obtain the mastered file plus the license certificate",
+        "description": "The delivery payload is released only on settlement. Fetching this route without a settled payment returns 402 with the payment requirements, and the 402 body does not contain the decryption key. With a settled payment the response carries the ciphertext URL, the AES-256-GCM key, and the license text; the master decrypts to a 320 kbps MP3. The key is delivered in the URL fragment and is never sent to the server.",
+        "parameters": [
+          { "name": "tier", "in": "query", "required": true, "schema": { "type": "string", "enum": ["basic", "premium", "sync"] }, "description": "basic $9 one project; premium $29 multiple projects or one client; sync $149 broadcast, film, paid advertising" }
+        ],
+        "responses": {
+          "402": {
+            "description": "Payment required. Body carries the x402 payment requirements for the chosen tier.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PaymentRequired" } } }
+          },
+          "200": {
+            "description": "Settled. The master and the license certificate are released.",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Delivery" } } }
+          }
+        }
+      }
+    },
+    "/free/": {
+      "get": {
+        "operationId": "listFreeTracks",
+        "summary": "Five tracks released under CC0, public domain, no attribution",
+        "description": "No payment, no signup, no attribution requirement. Commercial use permitted. Provided as a genuine free tier rather than a trial.",
+        "responses": { "200": { "description": "A page listing the five CC0 tracks with direct download links" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Catalog": {
+        "type": "object",
+        "properties": {
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "mood": { "type": "string" },
+                "bpm": { "type": "integer" },
+                "key": { "type": "string" },
+                "durationSeconds": { "type": "integer" },
+                "tiers": {
+                  "type": "object",
+                  "properties": {
+                    "basic": { "$ref": "#/components/schemas/Checkout" },
+                    "premium": { "$ref": "#/components/schemas/Checkout" },
+                    "sync": { "$ref": "#/components/schemas/Checkout" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Checkout": {
+        "type": "object",
+        "properties": {
+          "priceUsd": { "type": "number" },
+          "checkoutUrl": { "type": "string", "format": "uri", "description": "x402 payment link. Returns 402 until settled, then releases the delivery payload." },
+          "cardUrl": { "type": "string", "format": "uri", "description": "Stripe checkout for buyers paying by card." }
+        }
+      },
+      "PaymentRequired": {
+        "type": "object",
+        "description": "x402 payment requirements. Pay in USDC on Base, then retry with the payment header.",
+        "properties": {
+          "x402Version": { "type": "integer" },
+          "accepts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "scheme": { "type": "string", "const": "exact" },
+                "network": { "type": "string", "examples": ["eip155:8453", "base"] },
+                "maxAmountRequired": { "type": "string", "description": "Amount in USDC base units (6 decimals). 9000000 = $9.00" },
+                "asset": { "type": "string", "const": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913" },
+                "payTo": { "type": "string" },
+                "resource": { "type": "string" },
+                "description": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "Delivery": {
+        "type": "object",
+        "properties": {
+          "file": { "type": "string", "description": "URL of the AES-256-GCM ciphertext of the mastered MP3" },
+          "key": { "type": "string", "description": "base64url AES-256-GCM key, delivered in the URL fragment" },
+          "license": { "type": "string", "description": "License certificate text naming the track and the tier" },
+          "mimeType": { "type": "string", "const": "audio/mpeg" }
+        }
+      }
+    }
+  }
+}
