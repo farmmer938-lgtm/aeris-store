@@ -1,56 +1,22 @@
 # AERIS MUSIC
 
-> Original, pre-cleared production music. Every track is composed and mastered in-house from
-> synthesis — no samples, no third-party content, so there is nothing for Content ID to match.
-> Buyers receive the mastered file and a license certificate immediately on payment, with no human
-> in the loop.
+> Public status: the paid music catalog is temporarily closed while audio quality, licensing, and payment-to-delivery are re-verified.
 
-AERIS MUSIC licenses instrumental music to video creators, podcasters, and advertising producers.
-Three tiers cover the common cases: $9 Basic for one project with unlimited views, $29 Premium for
-multiple projects and monetized channels, $149 Sync for broadcast, film, and paid advertising.
-Payment is by card (Stripe) or USDC on Base (x402), and delivery happens in the same response that
-settles payment.
+## Available now
+- [Free CC0 music catalog](https://farmmer938-lgtm.github.io/aeris-store/free/): the page currently lists 13 downloadable tracks under its stated CC0 terms.
+- [Support](https://farmmer938-lgtm.github.io/aeris-store/support.html): support options; payout completion is not represented as verified here.
 
-Five tracks are also released under CC0 into the public domain with no attribution requirement, for
-anyone who needs a bed track without a signup.
+## Paid catalog
+- Status: CLOSED.
+- Paid track catalog API: [catalog.json](https://farmmer938-lgtm.github.io/aeris-store/agents/catalog.json) currently returns an empty catalog.
+- Creator kits and legacy paid landing pages are not being advertised while the payment-to-delivery path is checked.
+- Existing Stripe links may still exist in the payment provider; removal from this website does not itself deactivate those links.
+- Verified revenue: $0.00 as of the latest status record. Checkout links, clicks, points, or API handshakes are not revenue.
 
-## Catalog
+## Agent endpoint
+- [AERIS x402 Worker health](https://aeris-x402.farmmer-938.workers.dev/health)
+- [AERIS x402 Worker OpenAPI](https://aeris-x402.farmmer-938.workers.dev/openapi.json)
+- The Worker is a separate metered endpoint. Its live handshake is not evidence of a completed paid sale or a track-license purchase.
 
-- [All tracks and licensing](https://farmmer938-lgtm.github.io/aeris-store/): 15 mastered tracks with mood, tempo, key, and duration, and per-tier checkout for each.
-- [Machine-readable catalog](https://farmmer938-lgtm.github.io/aeris-store/agents/catalog.json): JSON with prices and USDC checkout URLs, for agents buying without a human.
-- [x402 resource server](https://aeris-x402.farmmer-938.workers.dev/catalog.json): a live HTTP 402 endpoint on a Cloudflare Worker, not a static page. `GET /tracks/<slug>` answers 402 with an `accepts[]` envelope. It currently settles on Base **testnet**; mainnet is pending a mainnet-capable (CDP) facilitator.
-- [Buying as an agent](https://farmmer938-lgtm.github.io/aeris-store/agents/): how the x402 flow works, and what the settled response contains.
-- [Free CC0 tracks](https://farmmer938-lgtm.github.io/aeris-store/free/): five instrumental tracks, public domain, no attribution.
-- [CC0 repository](https://github.com/farmmer938-lgtm/aeris-cc0-music): the same five tracks as raw downloads.
-- [Support](https://farmmer938-lgtm.github.io/aeris-store/support.html): buy a license, tip in USDC on Base, or sponsor.
-
-## Find music by use
-
-- [Royalty-free music for YouTube](https://farmmer938-lgtm.github.io/aeris-store/royalty-free-music-for-youtube/)
-- [Podcast intro music](https://farmmer938-lgtm.github.io/aeris-store/podcast-intro-music/)
-- [Music for ads and client work](https://farmmer938-lgtm.github.io/aeris-store/music-for-ads-and-client-work/)
-- [Background music for Twitch streams](https://farmmer938-lgtm.github.io/aeris-store/music-for-twitch-streams/)
-- [Background music for videos](https://farmmer938-lgtm.github.io/aeris-store/background-music-for-videos/)
-- [Music for corporate video](https://farmmer938-lgtm.github.io/aeris-store/music-for-corporate-video/)
-- [Wedding video music](https://farmmer938-lgtm.github.io/aeris-store/wedding-video-music/)
-- [Cinematic music for films](https://farmmer938-lgtm.github.io/aeris-store/cinematic-music-for-films/)
-- [Lofi music for study](https://farmmer938-lgtm.github.io/aeris-store/lofi-music-for-study/)
-
-## Pricing
-
-| Tier | Price | Rights granted |
-|---|---|---|
-| Basic | $9 | One project, unlimited views. YouTube, TikTok, Instagram, podcasts, personal projects. |
-| Premium | $29 | Multiple projects, monetized channels, single-client commercial work. |
-| Sync | $149 | Broadcast, TV, film, paid advertising, theatrical, worldwide. |
-| Custom brief | $15 in USDC | A track written to a described brief, delivered within 48 hours. |
-| Full commission | $249 | Original composition to brief, with revisions and a signed license. |
-
-## Notes
-
-- Rights are granted per track and per tier, and the certificate names both.
-- The license is issued at the moment of payment; there is no approval step.
-- Affiliates earn 20% of gross on their own per-tier links, paid in USDC from confirmed payments only.
-- If a buyer needs a specific mood, length, and intended use, we quote a turnaround before any
-  payment is made.
-- Current verified revenue is $0.00. This file states that rather than implying otherwise.
+## Release rule
+A product may return to paid sale only after technical audio QA, listening review, originality/licensing review, buyer-use-case validation, market-demand evidence, live checkout verification, and successful end-to-end delivery are all evidenced.
