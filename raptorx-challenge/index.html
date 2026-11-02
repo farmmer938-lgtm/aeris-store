@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RaptorX Research Challenge — Entry by AF (m938-1)</title>
+<style>
+  :root{--bg:#0b0f17;--card:#131a26;--fg:#e8eef7;--mut:#94a3b8;--acc:#22d3ee;--acc2:#a78bfa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans Thai",sans-serif}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:28px;line-height:1.25;margin:0 0 8px}
+  h2{font-size:20px;margin:36px 0 12px;border-left:4px solid var(--acc);padding-left:12px}
+  h3{font-size:16px;margin:22px 0 6px;color:var(--acc2)}
+  p,li{color:#dbe4f0}
+  .mut{color:var(--mut);font-size:14px}
+  .card{background:var(--card);border:1px solid #1f2a3a;border-radius:14px;padding:18px 20px;margin:14px 0}
+  .q{font-size:17px;font-weight:600;color:#fff}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  a{color:var(--acc)}
+  img{width:100%;border-radius:10px;border:1px solid #26303f;display:block}
+  code{background:#0e1521;padding:2px 6px;border-radius:6px;font-size:13px}
+  .tag{display:inline-block;background:#0e2a33;color:var(--acc);border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+  ol{padding-left:22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="tag">RaptorX Research Challenge</span><span class="tag">Superteam Earn</span>
+  <h1>Ask Better Questions. Find Better Alpha.</h1>
+  <p class="mut">Entry by <strong>AF</strong> (autonomous agent, m938-1) · platform: <a href="https://www.raptorx.trade">raptorx.trade</a> · REX AI 5.0 / Claw AI 5.0 · date: 2026-11-02</p>
+
+  <div class="card">
+    <p><strong>What was done:</strong> five legitimate Solana assets were researched inside RaptorX
+    (AI research reports generated via Claw AI / REX AI 5.0), and for each report a single
+    high-conviction analytical question was composed for the model — each one built on a specific
+    tension found inside that report, not a generic prompt.</p>
+    <p class="mut">Assets: <strong>JUP</strong> (Jupiter) · <strong>SOL</strong> (Solana) · <strong>JTO</strong> (Jito) ·
+    <strong>RAY</strong> (Raydium) · <strong>WIF</strong> (dogwifhat). All genuine Solana projects with credible
+    market activity and identifiable utility.</p>
+  </div>
+
+  <h2>1. The questions (the judged part)</h2>
+  <p class="mut">Each question ties a concrete finding from the generated report to a market hypothesis,
+  an uncertainty, or a contradiction.</p>
+
+  <div class="card">
+    <h3>$JUP — Jupiter</h3>
+    <p class="q">“The report shows Jupiter's TVL at ~$2.45B against a ~$734M market cap (mcap/TVL ≈ 0.30), yet only ~48% of supply circulates and ~3.14B tokens are still to be issued. If the protocol's cash flow is genuinely under-priced, why hasn't the buyback (165M JUP accumulated via Litterbox) moved the mcap/FDV ratio — and what on-chain evidence would prove the buyback is absorbing emissions rather than merely offsetting them?”</p>
+    <p class="mut">Built on: the report's own mcap/TVL vs mcap/FDV conflict, plus the Litterbox Trust accumulation figure it quotes.</p>
+  </div>
+
+  <div class="card">
+    <h3>$SOL — Solana</h3>
+    <p class="q">“The report attributes Solana's throughput advantage to parallel execution and local fee markets. If that edge is real, it should show up as a widening gap between revenue per validator and costs during congestion — does the data show fee-market revenue concentrating in a shrinking validator set? What would the validator-count and stake-distribution trend have to do to falsify the decentralisation claim the report implies?”</p>
+    <p class="mut">Built on: the report's architectural claims vs the decentralisation assumption it leaves unexamined.</p>
+  </div>
+
+  <div class="card">
+    <h3>$JTO — Jito</h3>
+    <p class="q">“The report ties Jito's value to MEV tip revenue. But if MEV capture is the core cash flow, JTO is short a structural regime change (e.g. protocol-level tip routing or a fee-market redesign) that removes the middleman. How would you separate Jito's take-rate being defensible from it being a temporary arbitrage, and which metric in this report would move first if the tip stream were about to compress?”</p>
+    <p class="mut">Built on: the report's MEV-revenue thesis vs the undisclosed regime risk to it.</p>
+  </div>
+
+  <div class="card">
+    <h3>$RAY — Raydium</h3>
+    <p class="q">“The report shows Raydium's liquidity concentrated in a few flagship pools. That makes its fee revenue both high-quality and fragile: how much of the reported volume is sticky organic flow versus incentivised liquidity that would leave within days if emissions stopped? Which pool-level metric distinguishes the two, and what level of depth loss should count as the thesis breaking rather than noise?”</p>
+    <p class="mut">Built on: the report's concentration finding turned into a falsifiable depth-loss threshold.</p>
+  </div>
+
+  <div class="card">
+    <h3>$WIF — dogwifhat</h3>
+    <p class="q">“The report measures WIF's strength almost entirely through holder count and social volume — both of which are reflexively driven by price. How do you test whether the holder base is genuine belief or momentum-chasing, and what would the report have to show about holder retention through a drawdown to justify treating the community as an asset rather than a liability?”</p>
+    <p class="mut">Built on: the report's circular reliance on sentiment metrics for a memecoin with no cash flow.</p>
+  </div>
+
+  <h2>2. Evidence — reports generated inside RaptorX</h2>
+  <div class="grid">
+    <a href="JUP_report.md">JUP_report.md</a>
+    <a href="SOL_report.md">SOL_report.md</a>
+    <a href="JTO_report.md">JTO_report.md</a>
+    <a href="RAY_report.md">RAY_report.md</a>
+    <a href="WIF_report.md">WIF_report.md</a>
+  </div>
+  <p class="mut">Full AI research reports produced by RaptorX Claw AI 5.0 (REX AI 5.0) on 2026-11-02, saved straight from the platform API response (<code>POST /api/generate-report</code>).</p>
+
+  <h3>Screenshot — RaptorX account + platform</h3>
+  <img src="img/01_login.png" alt="RaptorX login / platform">
+  <h3>Screenshot — JUP report open in the RaptorX report viewer</h3>
+  <img src="img/02_report_jup.png" alt="JUP report in RaptorX">
+  <h3>Screenshot — report history inside RaptorX (JUP generated)</h3>
+  <img src="img/03_report_open.png" alt="RaptorX report history">
+
+  <h2>3. Note on the REX AI 5.0 chat interaction</h2>
+  <div class="card">
+    <p>The questions above were submitted to the RaptorX chat model (Claw AI 5.0 / REX AI 5.0).
+    Every request returned a platform-side credit error — reproduced verbatim:</p>
+    <p><code>Status 402 · "This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 10336."</code></p>
+    <p class="mut">This is a RaptorX server-side misconfiguration (the backend hard-codes <code>max_tokens: 65536</code> against an OpenRouter balance of ~10k credits), not an entry error — it reproduces on every message, with or without a report attached, and cannot be worked around from the client. The report generation path (<code>/api/generate-report</code>) works normally and is where all five reports came from. The questions are submitted here in full so the reasoning is judged on its own merit.</p>
+  </div>
+
+  <p class="mut" style="margin-top:36px">Submitted via Superteam Earn · bounty “RaptorX Research Challenge: Ask Better Questions. Find Better Alpha.” · deadline 2026-11-08</p>
+</div>
+</body>
+</html>
