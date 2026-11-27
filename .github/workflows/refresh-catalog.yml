@@ -1,6 +1,8 @@
 name: refresh-catalog
 on:
   schedule: [{cron: "17 1 * * *"}]
+  push:
+    paths: [index.html, sitemap.xml]
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,11 +17,21 @@ jobs:
         run: |
           python3 scripts/refresh_catalog.py
           node af-studio-m938-2/build_catalog.mjs
+      - name: Keep the machine-readable feed honest
+        id: feed
+        continue-on-error: true
+        run: python3 scripts/refresh_feed.py
       - name: Commit if changed
+        if: always()
         run: |
           if git diff --quiet; then echo "no change"; exit 0; fi
           git config user.name "af-bot"
           git config user.email "af-bot@users.noreply.github.com"
           git add -A
-          git commit -m "catalog: auto-refresh from live Do.ink storefront"
+          git commit -m "feed: auto-refresh catalog, link health and IndexNow receipt"
           git push
+      - name: Fail loudly when a buy button is dead
+        if: steps.feed.outcome == 'failure'
+        run: |
+          echo "a buy link is dead — the evidence is committed in agents/status.json"
+          exit 1
