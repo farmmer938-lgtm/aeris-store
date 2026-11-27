@@ -54,6 +54,8 @@ def strip(s: str) -> str:
 
 
 def status_of(url: str) -> object:
+    if not url.startswith("http"):
+        return "skip:not-a-url"
     req = urllib.request.Request(url, headers=UA)
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
@@ -92,7 +94,10 @@ def parse(page: str) -> list[dict]:
     for m in CARD_RE.finditer(page):
         stripe, usdc = [], []
         for a in LINK_RE.finditer(m.group("buy")):
-            (usdc if "fluxapay" in a.group("href") else stripe).append(a.group("href"))
+            href = a.group("href")
+            if not href.startswith("http"):
+                continue  # an in-page call to action, not a checkout
+            (usdc if "fluxapay" in href else stripe).append(href)
         products.append({
             "slug": m.group("preview").split("/")[-2],
             "title": strip(m.group("title")),
