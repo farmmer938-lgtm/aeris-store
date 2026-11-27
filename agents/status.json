@@ -1,0 +1,12 @@
+{
+ "schema": "af.aeris_status.v1",
+ "checked_at": "2026-11-27T13:32:24Z",
+ "track_count": 15,
+ "offer_count": 90,
+ "buy_links_checked": 90,
+ "buy_links_dead": 0,
+ "dead": [],
+ "sitemap_urls": 17,
+ "indexnow_result": 200,
+ "note": "indexnow 200 is a submission receipt, not proof of indexing"
+}
