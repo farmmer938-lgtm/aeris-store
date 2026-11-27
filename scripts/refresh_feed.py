@@ -190,9 +190,12 @@ def main() -> int:
           % (catalog["track_count"], catalog["offer_count"], catalog["paid_catalog_status"]))
     if catalog["blocked_reason"]:
         print("BLOCKED:", catalog["blocked_reason"])
-    if catalog["offer_count"] == 0:
-        print("refusing: parsed zero offers — keeping the previous feed rather than claiming CLOSED")
-        return 1
+    # Zero offers is a legitimate state (the catalogue is blocked because the masters are
+    # missing). Zero TRACKS means the page structure changed and the parse is lying, which is the
+    # only case worth refusing.
+    if catalog["track_count"] == 0:
+        print("refusing: parsed zero tracks — page structure changed, keeping the previous feed")
+        return 2
 
     Path("agents").mkdir(exist_ok=True)
     Path("agents/catalog.json").write_text(
