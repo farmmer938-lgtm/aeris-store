@@ -5,7 +5,7 @@
  "provider": "AERIS MUSIC",
  "storefront": "https://farmmer938-lgtm.github.io/aeris-store/",
  "track_count": 15,
- "offer_count": 15,
+ "offer_count": 0,
  "rails": {
   "card": "Stripe hosted checkout",
   "usdc": "Base (USDC) via agent wallet"
@@ -20,16 +20,14 @@
    "meta": "cinematic · 96 BPM · D minor · 80s",
    "description": "Wide cinematic soundscapes for trailers, documentaries, and dramatic storytelling.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/vast/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -64,16 +62,14 @@
    "meta": "dark · 88 BPM · E minor · 87s",
    "description": "Tense, dark and minimal. Built for suspense, true-crime podcasts, and tech drama.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/low-light/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -108,16 +104,14 @@
    "meta": "chill · 84 BPM · A minor · 91s",
    "description": "Calm, warm pads with a laid-back pulse. Perfect for study sessions, vlogs, and slow mornings.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/hazy-beneath/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -152,16 +146,14 @@
    "meta": "lofi · 74 BPM · G major · 103s",
    "description": "Tape-warm lofi beats with gentle chords and soft rhythm. Ideal for coding, reading, and late nights.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/old-photos-beneath/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -196,16 +188,14 @@
    "meta": "uplifting · 112 BPM · C major · 68s",
    "description": "Bright, optimistic and clean. Great for commercial, travel vlogs, and feel-good content.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/evergreen/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -240,16 +230,14 @@
    "meta": "energetic · 128 BPM · C major · 60s",
    "description": "High-energy pulse built for workouts, gaming, and action-packed edits.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/fast-lane/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -284,16 +272,14 @@
    "meta": "cinematic · 96 BPM · D minor · 80s",
    "description": "Wide cinematic soundscapes for trailers, documentaries, and dramatic storytelling.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/fracture-monolith/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -328,16 +314,14 @@
    "meta": "chill · 84 BPM · A minor · 91s",
    "description": "Calm, warm pads with a laid-back pulse. Perfect for study sessions, vlogs, and slow mornings.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/hazy-outlands/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -372,16 +356,14 @@
    "meta": "lofi · 74 BPM · G major · 103s",
    "description": "Tape-warm lofi beats with gentle chords and soft rhythm. Ideal for coding, reading, and late nights.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/warm-static-monolith/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -416,16 +398,14 @@
    "meta": "uplifting · 112 BPM · C major · 68s",
    "description": "Bright, optimistic and clean. Great for commercial, travel vlogs, and feel-good content.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/lightfall/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -460,16 +440,14 @@
    "meta": "energetic · 128 BPM · C major · 60s",
    "description": "High-energy pulse built for workouts, gaming, and action-packed edits.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/overdrive-fracture/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -504,16 +482,14 @@
    "meta": "cinematic · 96 BPM · D minor · 80s",
    "description": "Wide cinematic soundscapes for trailers, documentaries, and dramatic storytelling.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/fracture-the-long-walk/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -548,16 +524,14 @@
    "meta": "dark · 88 BPM · E minor · 87s",
    "description": "Tense, dark and minimal. Built for suspense, true-crime podcasts, and tech drama.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/colder-vast/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -592,16 +566,14 @@
    "meta": "chill · 84 BPM · A minor · 91s",
    "description": "Calm, warm pads with a laid-back pulse. Perfect for study sessions, vlogs, and slow mornings.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/hazy-monolith/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
@@ -636,16 +608,14 @@
    "meta": "lofi · 74 BPM · G major · 103s",
    "description": "Tape-warm lofi beats with gentle chords and soft rhythm. Ideal for coding, reading, and late nights.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/cassette-84-vast/preview.mp3",
-   "stripe": [
-    "free/"
-   ],
+   "stripe": [],
    "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
      "price_text": null,
-     "card_url": "free/",
+     "card_url": null,
      "usdc_url": null,
      "deliverable": false
     },
