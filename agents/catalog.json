@@ -1,10 +1,11 @@
 {
  "schema": "af.aeris_catalog.v1",
+ "paid_catalog_status": "BLOCKED",
+ "blocked_reason": "The file behind each paid track is a preview, not a master (64 kbps, 1 channel(s), 80.0s). Offering a licence for it would take money for a worse copy than the free catalogue ships (320 kbps stereo).",
  "provider": "AERIS MUSIC",
  "storefront": "https://farmmer938-lgtm.github.io/aeris-store/",
- "paid_catalog_status": "OPEN",
  "track_count": 15,
- "offer_count": 90,
+ "offer_count": 15,
  "rails": {
   "card": "Stripe hosted checkout",
   "usdc": "Base (USDC) via agent wallet"
@@ -20,38 +21,42 @@
    "description": "Wide cinematic soundscapes for trailers, documentaries, and dramatic storytelling.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/vast/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/9B64gz8RkeXn82ufcugw000",
-    "https://buy.stripe.com/7sYcN54B42aB6Yq8O6gw001",
-    "https://buy.stripe.com/bJe4gz2sWbLbaaCd4mgw002"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_KjKUELqDiSBXOoXnp2fYng7O",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_T_Dv48gvw0buF3CybXMkrVTU",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_DFbCKMhh49QhzRwEdNoGUqS3"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/9B64gz8RkeXn82ufcugw000",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_KjKUELqDiSBXOoXnp2fYng7O"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/7sYcN54B42aB6Yq8O6gw001",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_T_Dv48gvw0buF3CybXMkrVTU"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/bJe4gz2sWbLbaaCd4mgw002",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_DFbCKMhh49QhzRwEdNoGUqS3"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 80.0,
+    "bytes": 640556
+   },
+   "deliverable": false
   },
   {
    "slug": "low-light",
@@ -60,38 +65,42 @@
    "description": "Tense, dark and minimal. Built for suspense, true-crime podcasts, and tech drama.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/low-light/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/3cIdR96Jc6qR96y9Sagw003",
-    "https://buy.stripe.com/00waEX8Rk02tfuW9Sagw004",
-    "https://buy.stripe.com/4gM6oH3x002t82uaWegw005"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_lyHcLqhxPrXKu-HR_a156j8b",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_hsvYdYfWj3IcrnKcmP6QH41K",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_JcbGoa-dBqrIW0yeX8YVFfuH"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/3cIdR96Jc6qR96y9Sagw003",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_lyHcLqhxPrXKu-HR_a156j8b"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/00waEX8Rk02tfuW9Sagw004",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_hsvYdYfWj3IcrnKcmP6QH41K"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/4gM6oH3x002t82uaWegw005",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_JcbGoa-dBqrIW0yeX8YVFfuH"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 87.3,
+    "bytes": 698732
+   },
+   "deliverable": false
   },
   {
    "slug": "hazy-beneath",
@@ -100,38 +109,42 @@
    "description": "Calm, warm pads with a laid-back pulse. Perfect for study sessions, vlogs, and slow mornings.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/hazy-beneath/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/dRm7sLebE6qRbeG2pIgw006",
-    "https://buy.stripe.com/14A7sLaZsbLbdmO0hAgw007",
-    "https://buy.stripe.com/28E14n6Jc8yZ4Qi2pIgw008"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_y9ESfzWfFuBNIAeq8GpWpMCc",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_c_GInJw1sfmXBq6l-tSCaRgo",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_8MA4QA6PNG7CHHSNULXoKHhU"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/dRm7sLebE6qRbeG2pIgw006",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_y9ESfzWfFuBNIAeq8GpWpMCc"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/14A7sLaZsbLbdmO0hAgw007",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_c_GInJw1sfmXBq6l-tSCaRgo"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/28E14n6Jc8yZ4Qi2pIgw008",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_8MA4QA6PNG7CHHSNULXoKHhU"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 91.5,
+    "bytes": 731948
+   },
+   "deliverable": false
   },
   {
    "slug": "old-photos-beneath",
@@ -140,38 +153,42 @@
    "description": "Tape-warm lofi beats with gentle chords and soft rhythm. Ideal for coding, reading, and late nights.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/old-photos-beneath/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/eVq00j8Rkg1r96y2pIgw009",
-    "https://buy.stripe.com/7sYaEXffI2aB2Ia2pIgw00a",
-    "https://buy.stripe.com/5kQ3cv5F802t82ud4mgw00b"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_2YzOCHpKCcl56n3dNAsYDgLf",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_RzqrxD_TFiL7MhQs6Xg3nQc4",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_538kMFE2DVzMKqQhG8r17Tiw"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/eVq00j8Rkg1r96y2pIgw009",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_2YzOCHpKCcl56n3dNAsYDgLf"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/7sYaEXffI2aB2Ia2pIgw00a",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_RzqrxD_TFiL7MhQs6Xg3nQc4"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/5kQ3cv5F802t82ud4mgw00b",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_538kMFE2DVzMKqQhG8r17Tiw"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 103.8,
+    "bytes": 830828
+   },
+   "deliverable": false
   },
   {
    "slug": "evergreen",
@@ -180,38 +197,42 @@
    "description": "Bright, optimistic and clean. Great for commercial, travel vlogs, and feel-good content.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/evergreen/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/4gMaEXffI5mN1E6fcugw00c",
-    "https://buy.stripe.com/14A14nffIg1r3Meggygw00d",
-    "https://buy.stripe.com/aFaaEX8Rk9D3ciK2pIgw00e"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_XU2m5piZqJpQUrFY0Fbwindj",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Wj4DVNUIfgxwA_CLdh1u5E14",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Or1QJMEHAcNYvl-OF5sxFZlr"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/4gMaEXffI5mN1E6fcugw00c",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_XU2m5piZqJpQUrFY0Fbwindj"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/14A14nffIg1r3Meggygw00d",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Wj4DVNUIfgxwA_CLdh1u5E14"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/aFaaEX8Rk9D3ciK2pIgw00e",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Or1QJMEHAcNYvl-OF5sxFZlr"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 68.6,
+    "bytes": 549164
+   },
+   "deliverable": false
   },
   {
    "slug": "fast-lane",
@@ -220,38 +241,42 @@
    "description": "High-energy pulse built for workouts, gaming, and action-packed edits.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/fast-lane/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/14A4gzaZs3eF3Me7K2gw00f",
-    "https://buy.stripe.com/00wcN51oSdTj0A23tMgw00g",
-    "https://buy.stripe.com/5kQcN55F88yZdmO9Sagw00h"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_8JyR_pS8in-u2Eki95a_gFY8",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl__yD5_uhqnY7E9wOZz7pYX5oI",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_4UBQJxmBwgdGfV-2WZozuCu4"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/14A4gzaZs3eF3Me7K2gw00f",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_8JyR_pS8in-u2Eki95a_gFY8"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/00wcN51oSdTj0A23tMgw00g",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl__yD5_uhqnY7E9wOZz7pYX5oI"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/5kQcN55F88yZdmO9Sagw00h",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_4UBQJxmBwgdGfV-2WZozuCu4"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 60.0,
+    "bytes": 480428
+   },
+   "deliverable": false
   },
   {
    "slug": "fracture-monolith",
@@ -260,38 +285,42 @@
    "description": "Wide cinematic soundscapes for trailers, documentaries, and dramatic storytelling.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/fracture-monolith/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/bJedR94B4aH74Qifcugw00i",
-    "https://buy.stripe.com/28E6oH4B4g1raaC4xQgw00j",
-    "https://buy.stripe.com/cNicN5d7AeXn0A28O6gw00k"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Y0ToebV5_wtHSEb1RhZEHFim",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_5S59WUa-0VznQRyjkdc9mRCp",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_orjcJ0BV1-EUvsE5PI9MILiX"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/bJedR94B4aH74Qifcugw00i",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Y0ToebV5_wtHSEb1RhZEHFim"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/28E6oH4B4g1raaC4xQgw00j",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_5S59WUa-0VznQRyjkdc9mRCp"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/cNicN5d7AeXn0A28O6gw00k",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_orjcJ0BV1-EUvsE5PI9MILiX"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 80.0,
+    "bytes": 640556
+   },
+   "deliverable": false
   },
   {
    "slug": "hazy-outlands",
@@ -300,38 +329,42 @@
    "description": "Calm, warm pads with a laid-back pulse. Perfect for study sessions, vlogs, and slow mornings.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/hazy-outlands/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/9B68wPebE02tciKe8qgw00l",
-    "https://buy.stripe.com/dRmbJ13x0bLb96yc0igw00m",
-    "https://buy.stripe.com/3cI7sL8RkaH7ciK0hAgw00n"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_-IG7WQJMJR3CVAiYYR9WqYRY",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_I2yNcH7SvHQdZZV23cpJ4VtL",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Lh_0_6ePtyHTxszMttbGrNYe"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/9B68wPebE02tciKe8qgw00l",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_-IG7WQJMJR3CVAiYYR9WqYRY"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/dRmbJ13x0bLb96yc0igw00m",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_I2yNcH7SvHQdZZV23cpJ4VtL"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/3cI7sL8RkaH7ciK0hAgw00n",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Lh_0_6ePtyHTxszMttbGrNYe"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 91.5,
+    "bytes": 731948
+   },
+   "deliverable": false
   },
   {
    "slug": "warm-static-monolith",
@@ -340,38 +373,42 @@
    "description": "Tape-warm lofi beats with gentle chords and soft rhythm. Ideal for coding, reading, and late nights.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/warm-static-monolith/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/28E3cv3x02aB6Yq5BUgw00o",
-    "https://buy.stripe.com/6oUaEX7Ng9D3eqS1lEgw00p",
-    "https://buy.stripe.com/3cI14n5F84iJeqSd4mgw00q"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_PpTe58bo9DpHII8LbkZl_Dd5",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_9BeoB0fn3W_9qBubwxuUtu4a",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_CrRgAA9IVsT4-gxwxihpUAnX"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/28E3cv3x02aB6Yq5BUgw00o",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_PpTe58bo9DpHII8LbkZl_Dd5"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/6oUaEX7Ng9D3eqS1lEgw00p",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_9BeoB0fn3W_9qBubwxuUtu4a"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/3cI14n5F84iJeqSd4mgw00q",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_CrRgAA9IVsT4-gxwxihpUAnX"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 103.8,
+    "bytes": 830828
+   },
+   "deliverable": false
   },
   {
    "slug": "lightfall",
@@ -380,38 +417,42 @@
    "description": "Bright, optimistic and clean. Great for commercial, travel vlogs, and feel-good content.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/lightfall/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/14A7sLffI02t2Iae8qgw00r",
-    "https://buy.stripe.com/8x27sLd7AbLb5Umd4mgw00s",
-    "https://buy.stripe.com/5kQ7sL9VocPf1E69Sagw00t"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_NPMG6dFGVxdk51pFWfC5nMzE",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_lKkOespRbx3EhkPJ2PxyQeGB",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_WLFqPTXGIaTXRaslKnm1jsyX"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/14A7sLffI02t2Iae8qgw00r",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_NPMG6dFGVxdk51pFWfC5nMzE"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/8x27sLd7AbLb5Umd4mgw00s",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_lKkOespRbx3EhkPJ2PxyQeGB"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/5kQ7sL9VocPf1E69Sagw00t",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_WLFqPTXGIaTXRaslKnm1jsyX"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 68.6,
+    "bytes": 549164
+   },
+   "deliverable": false
   },
   {
    "slug": "overdrive-fracture",
@@ -420,38 +461,42 @@
    "description": "High-energy pulse built for workouts, gaming, and action-packed edits.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/overdrive-fracture/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/7sY28r4B4dTj3Mefcugw00u",
-    "https://buy.stripe.com/00w6oH0kO3eF6Yq2pIgw00v",
-    "https://buy.stripe.com/7sY4gzc3w9D33Me3tMgw00w"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_hAj0mxP-zcqWhumBOLHE6xsC",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_rnbxswMC8uwP0WJreMYjnMy5",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Ip1qQHt8Rb_0GJ7droV6fLZ-"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/7sY28r4B4dTj3Mefcugw00u",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_hAj0mxP-zcqWhumBOLHE6xsC"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/00w6oH0kO3eF6Yq2pIgw00v",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_rnbxswMC8uwP0WJreMYjnMy5"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/7sY4gzc3w9D33Me3tMgw00w",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Ip1qQHt8Rb_0GJ7droV6fLZ-"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 60.0,
+    "bytes": 480428
+   },
+   "deliverable": false
   },
   {
    "slug": "fracture-the-long-walk",
@@ -460,38 +505,42 @@
    "description": "Wide cinematic soundscapes for trailers, documentaries, and dramatic storytelling.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/fracture-the-long-walk/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/9B6cN56Jc3eFdmOfcugw00x",
-    "https://buy.stripe.com/5kQ4gz2sW16x5Umc0igw00y",
-    "https://buy.stripe.com/fZu4gz7Ng5mN96yggygw00z"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_hmVuvIGmmj6WNYrZeYe-8lPv",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_JuTheTbpd3ML_nvViRiTJUxQ",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_GXtRvCuEfL5L_yAZig2APj3T"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/9B6cN56Jc3eFdmOfcugw00x",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_hmVuvIGmmj6WNYrZeYe-8lPv"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/5kQ4gz2sW16x5Umc0igw00y",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_JuTheTbpd3ML_nvViRiTJUxQ"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/fZu4gz7Ng5mN96yggygw00z",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_GXtRvCuEfL5L_yAZig2APj3T"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 80.0,
+    "bytes": 640556
+   },
+   "deliverable": false
   },
   {
    "slug": "colder-vast",
@@ -500,38 +549,42 @@
    "description": "Tense, dark and minimal. Built for suspense, true-crime podcasts, and tech drama.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/colder-vast/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/7sYeVdc3weXn2Iad4mgw00A",
-    "https://buy.stripe.com/aFafZh7Ng8yZ4Qi1lEgw00B",
-    "https://buy.stripe.com/4gMfZh1oS5mN5Um5BUgw00C"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_UkVv06RtkNFohyDC-wB35zxX",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_MBLPlx9YZwtmcAKbitmbuL1_",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_UUEGRlnrTHC4nSK_JD3iJEGR"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/7sYeVdc3weXn2Iad4mgw00A",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_UkVv06RtkNFohyDC-wB35zxX"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/aFafZh7Ng8yZ4Qi1lEgw00B",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_MBLPlx9YZwtmcAKbitmbuL1_"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/4gMfZh1oS5mN5Um5BUgw00C",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_UUEGRlnrTHC4nSK_JD3iJEGR"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 87.3,
+    "bytes": 698732
+   },
+   "deliverable": false
   },
   {
    "slug": "hazy-monolith",
@@ -540,38 +593,42 @@
    "description": "Calm, warm pads with a laid-back pulse. Perfect for study sessions, vlogs, and slow mornings.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/hazy-monolith/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/fZu9ATd7A4iJ6Yq0hAgw00D",
-    "https://buy.stripe.com/3cI9AT7Ng2aB2Iad4mgw00E",
-    "https://buy.stripe.com/8x2fZh0kO5mNeqSc0igw00F"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Mt-Qd-AEG5RoOBVJyCBRgpI0",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_n_OYjySKkA4bfxgqkDPbYI6b",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_OOP8wsYZ_vKzU1N7FZ4Fl_fR"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/fZu9ATd7A4iJ6Yq0hAgw00D",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_Mt-Qd-AEG5RoOBVJyCBRgpI0"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/3cI9AT7Ng2aB2Iad4mgw00E",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_n_OYjySKkA4bfxgqkDPbYI6b"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/8x2fZh0kO5mNeqSc0igw00F",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_OOP8wsYZ_vKzU1N7FZ4Fl_fR"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 91.5,
+    "bytes": 731948
+   },
+   "deliverable": false
   },
   {
    "slug": "cassette-84-vast",
@@ -580,38 +637,42 @@
    "description": "Tape-warm lofi beats with gentle chords and soft rhythm. Ideal for coding, reading, and late nights.",
    "preview": "https://farmmer938-lgtm.github.io/aeris-store/assets/tracks/cassette-84-vast/preview.mp3",
    "stripe": [
-    "https://buy.stripe.com/eVq00jaZs5mN3Me5BUgw00G",
-    "https://buy.stripe.com/14A00j9VocPf4Qiggygw00H",
-    "https://buy.stripe.com/6oU00j8Rk2aB2Ia4xQgw00I"
+    "free/"
    ],
-   "usdc": [
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_e0IeZ5lkRqhBlBWhn_Lgeou4",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_xGAJeQkY7f1eVsNKtm9ThxT4",
-    "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_v--NQDZQ8bqw5JepQoHEjPnj"
-   ],
+   "usdc": [],
    "offers": [
     {
      "tier": "basic",
      "name": "Basic License",
-     "price_text": "$9 USD",
-     "card_url": "https://buy.stripe.com/eVq00jaZs5mN3Me5BUgw00G",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_e0IeZ5lkRqhBlBWhn_Lgeou4"
+     "price_text": null,
+     "card_url": "free/",
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "premium",
      "name": "Premium License",
-     "price_text": "$29 USD",
-     "card_url": "https://buy.stripe.com/14A00j9VocPf4Qiggygw00H",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_xGAJeQkY7f1eVsNKtm9ThxT4"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     },
     {
      "tier": "sync",
      "name": "Sync License",
-     "price_text": "$149 USD",
-     "card_url": "https://buy.stripe.com/6oU00j8Rk2aB2Ia4xQgw00I",
-     "usdc_url": "https://agentwallet.fluxapay.xyz/pay/paymentlink/pl_v--NQDZQ8bqw5JepQoHEjPnj"
+     "price_text": null,
+     "card_url": null,
+     "usdc_url": null,
+     "deliverable": false
     }
-   ]
+   ],
+   "audio": {
+    "kbps": 64,
+    "channels": 1,
+    "seconds": 103.8,
+    "bytes": 830828
+   },
+   "deliverable": false
   }
  ]
 }
