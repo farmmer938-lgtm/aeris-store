@@ -35,5 +35,5 @@ jobs:
       - name: Fail loudly when a buy button is dead
         if: steps.feed.outcome == 'failure'
         run: |
-          echo "a buy link is dead — the evidence is committed in agents/status.json"
+          echo "the feed check reported a problem — the evidence is committed in agents/status.json"
           exit 1
