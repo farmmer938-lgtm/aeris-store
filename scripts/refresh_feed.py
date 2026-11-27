@@ -31,6 +31,12 @@ SITE = "https://farmmer938-lgtm.github.io/aeris-store/"
 HOST = "farmmer938-lgtm.github.io"
 INDEXNOW_KEY = "20008340a440f10c1c89d03b5d985719"
 UA = {"User-Agent": "af-feed-refresh/1.0"}
+# A product may only be offered for money if the file behind it is a master. Vast is 80s at
+# 64 kbps MONO while the free catalogue ships 320 kbps stereo, so "premium" was selling the worst
+# copy AF owns. These thresholds are the line between a master and a preview.
+MIN_KBPS = 192
+MIN_CHANNELS = 2
+
 TIERS = ["basic", "premium", "sync"]
 TIER_NAMES = {"basic": "Basic License", "premium": "Premium License", "sync": "Sync License"}
 
@@ -58,6 +64,29 @@ def status_of(url: str) -> object:
         return "ERR:%s" % type(e).__name__
 
 
+def audio_facts(url: str) -> dict:
+    """Bitrate / channels / length of the file a buyer would actually receive."""
+    import io
+    try:
+        from mutagen.mp3 import MP3
+    except ImportError:
+        return {"error": "mutagen not installed"}
+    try:
+        req = urllib.request.Request(url, headers=UA)
+        with urllib.request.urlopen(req, timeout=60) as r:
+            raw = r.read()
+        a = MP3(io.BytesIO(raw))
+        return {"kbps": a.info.bitrate // 1000, "channels": a.info.channels,
+                "seconds": round(a.info.length, 1), "bytes": len(raw)}
+    except Exception as e:
+        return {"error": "%s: %s" % (type(e).__name__, e)}
+
+
+def is_master(f: dict) -> bool:
+    return (not f.get("error") and f.get("kbps", 0) >= MIN_KBPS
+            and f.get("channels", 0) >= MIN_CHANNELS)
+
+
 def parse(page: str) -> list[dict]:
     products = []
     for m in CARD_RE.finditer(page):
@@ -81,7 +110,7 @@ def price_of(card_url: str, page: str) -> str | None:
     return strip(m.group(1)) if m else None
 
 
-def build(page: str) -> dict:
+def build(page: str, probe: bool = False) -> dict:
     products = parse(page)
     for p in products:
         p["offers"] = []
@@ -93,11 +122,34 @@ def build(page: str) -> dict:
                 "card_url": card,
                 "usdc_url": p["usdc"][i] if i < len(p["usdc"]) else None,
             })
+    if probe:
+        for p in products:
+            facts = audio_facts(p["preview"])
+            p["audio"] = facts
+            p["deliverable"] = is_master(facts)
+            for o in p["offers"]:
+                o["deliverable"] = p["deliverable"]
+        sellable = [p for p in products if p.get("deliverable")]
+        status = ("OPEN" if len(sellable) == len(products) and products
+                  else "BLOCKED" if not sellable else "PARTIAL")
+        blocked_reason = None
+        if status != "OPEN":
+            worst = products[0]["audio"] if products else {}
+            blocked_reason = (
+                "The file behind each paid track is a preview, not a master "
+                "(%s kbps, %s channel(s), %ss). Offering a licence for it would take money for a "
+                "worse copy than the free catalogue ships (320 kbps stereo)."
+                % (worst.get("kbps", "?"), worst.get("channels", "?"), worst.get("seconds", "?")))
+    else:
+        status = "OPEN" if products else "CLOSED"
+        blocked_reason = None
+
     return {
         "schema": "af.aeris_catalog.v1",
+        "paid_catalog_status": status,
+        "blocked_reason": blocked_reason,
         "provider": "AERIS MUSIC",
         "storefront": SITE,
-        "paid_catalog_status": "OPEN" if products else "CLOSED",
         "track_count": len(products),
         "offer_count": sum(len(p["stripe"]) + len(p["usdc"]) for p in products),
         "rails": {"card": "Stripe hosted checkout", "usdc": "Base (USDC) via agent wallet"},
@@ -133,9 +185,11 @@ def main() -> int:
         return 2
     page = index.read_text(encoding="utf-8", errors="replace")
 
-    catalog = build(page)
+    catalog = build(page, probe=True)
     print("tracks=%d offers=%d status=%s"
           % (catalog["track_count"], catalog["offer_count"], catalog["paid_catalog_status"]))
+    if catalog["blocked_reason"]:
+        print("BLOCKED:", catalog["blocked_reason"])
     if catalog["offer_count"] == 0:
         print("refusing: parsed zero offers — keeping the previous feed rather than claiming CLOSED")
         return 1
@@ -163,6 +217,9 @@ def main() -> int:
         "buy_links_checked": len(urls),
         "buy_links_dead": len(dead),
         "dead": dead,
+        "paid_catalog_status": catalog["paid_catalog_status"],
+        "blocked_reason": catalog["blocked_reason"],
+        "undeliverable_tracks": [p["slug"] for p in catalog["catalog"] if not p.get("deliverable", True)],
         "sitemap_urls": len(pages),
         "indexnow_result": in_result,
         "note": "indexnow 200 is a submission receipt, not proof of indexing",
